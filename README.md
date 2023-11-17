@@ -17,3 +17,12 @@ After running the script with the specified trial IDs, you will receive four spr
 
 ## Steps to PUSH Phenotypic data to T3 using BrAPI
 
+Each User must enter the following:
+- Auth code:
+- Username:
+- Password:
+
+To upload the processed phenotypic data to T3 Breedbase database. 
+- Note:- The data should be in CSV format and arranged in the form:
+- ObservationUnitDbId | ObservationVariableDbId | Value
+
