@@ -3,8 +3,9 @@
 ## Steps to Pull Plot Map Data from T3 using BrAPI
 
 To download plot map data from T3, update the trial_ids variable in the script:
-- trial_ids = [9325, 9326, 9358, 9427]  # Replace with your desired trial IDs
-
+```python
+trial_ids = [9325, 9326, 9358, 9427]  # Replace with your desired trial IDs
+```
 
 
 After running the script with the specified trial IDs, you will receive four spreadsheet files:
