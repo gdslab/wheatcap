@@ -63,8 +63,6 @@ The code is developed using python 3.7 on Windows OS. No special computing power
    pip install -r requirements.txt
    ```
 
-   ```
-
 ### Data preparation
 #### Data PULL
 - All that is required here is the ```trial_ids```. The user can then get the desired results illustrated above. The user is at liberty to download multiple trials at a time from the T3 Breedbase database as long as the needed ```trial_ids``` are known.
