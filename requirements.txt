@@ -1,4 +1,5 @@
 pandas
 request
 numpy
-glob
+tqdm
+
