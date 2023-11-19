@@ -11,6 +11,7 @@ This document outlines a pipeline developed by the [*Geospatial Data Science Lab
 The Data PULL results show the data downloaded from the T3 Breedbase Database after establishing a successful connection. The main data obtained include: Trial name, Plot ID, studyDBId, studyName, Column number, Row number, Plot number, Plot map, Trial type, etc. After running the script with the specified trial IDs, the user will receive four spreadsheet files such as ```test1_id_{trial_id}.csv```, ```test2_id_{trial_id}.csv```, ```test3_id_{trial_id}.csv```, and ```test4_id_{trial_id}.csv```. Below is a sample of the results:
 
 - Test 1
+
 | Name          | PLOT_ID | studyDbId |        studyName         | Column | Row |  PLOT_NO |    TrialType      |
 |---------------|---------|-----------|--------------------------|--------|-----|----------|-------------------|
 | KSTdGD30-8    | 1373887 | 9326      | 22_TdGD_Hays_Yield_Trials|   1    |  1  |    1     | phenotyping_trial | 
