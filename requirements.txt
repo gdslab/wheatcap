@@ -1,0 +1,4 @@
+pandas
+request
+numpy
+glob
