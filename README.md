@@ -103,7 +103,7 @@ python tools/BrAPI_PUSH.py --cfg data/cornell_data_2022.csv
 - If you are not authorized and need authorization, please contact David Waring at djw64@cornell.edu
 
 ### Links
-- BrAPI documentation can be accessed at: [*TAMU/T3 BrAPI*](Bhttps://notes.triticeaetoolbox.org/w39PW42OSTeDvDNX_WVhZg)
+- BrAPI documentation can be accessed at: [*TAMU/T3 BrAPI*](https://notes.triticeaetoolbox.org/w39PW42OSTeDvDNX_WVhZg)
 - Tutorials from the T3 Team at: [*2023 WheatCAP Workshop*](https://notes.triticeaetoolbox.org/s/L6d41SNKQ)
 
 
