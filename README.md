@@ -1,4 +1,4 @@
-# WheatcCAP
+# WheatCAP
 
 ## Steps to Pull Plot Map Data from T3 using BrAPI
 
