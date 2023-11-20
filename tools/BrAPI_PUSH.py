@@ -50,7 +50,7 @@ def main(csv_file):
     trait_ids = df.iloc[:, 1::2]
     values = df.iloc[:, 2::2]
 
-    # Create a list of observations to be pushed to the T3
+    # Create a list of observations to be pushed to the T3 Breedbase DB
     observations = []
     for i in tqdm(range(len(plot_ids)), desc="Processing your request"):
         trait_value_pairs = zip(trait_ids.iloc[i], values.iloc[i])
