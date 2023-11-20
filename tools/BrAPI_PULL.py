@@ -2,8 +2,10 @@
 import requests
 import pandas as pd
 import numpy as np
+import os
+from tqdm import tqdm
 
-# --- Defining function
+# Functions
 def returning_unit(name):
     """
     Extracts the numeric part from the end of a string.
@@ -52,10 +54,18 @@ def fetch_paginated_data(endpoint):
 trial_id_input = input("Enter trial IDs, separated by commas (e.g., 9325,9326,9358,9427): ")
 trial_ids = [int(id.strip()) for id in trial_id_input.split(',')]
 
+#Create Ouput directory
+output_dir = "output"
+os.makedirs(output_dir, exist_ok=True)
+
+
 # --- Creating list with the initial results
 all_dataframes_M = []
 
-for trial_id in trial_ids:
+for trial_id in tqdm(trial_ids, desc="Processing your request"):
+    trial_dir = os.path.join(output_dir, f"trial_{trial_id}")
+    os.makedirs(trial_dir, exist_ok=True)
+
     api_base_url = "https://wheatcap.triticeaetoolbox.org"
     
     try:
@@ -119,17 +129,12 @@ for trial_id in trial_ids:
     # Output 1 for Plots
     M2 = M_df[['Name', 'PLOT_ID', 'studyDbId', 'studyName', 'X', 'Y', 'PLOT_NO', 'studyType' ]].copy()
     M2.rename(columns={'X': 'Column', 'Y': 'Row', 'studyType': 'TrialType'}, inplace=True)
-    # --- Printing to check
-    M2.to_csv("test1_id_%s.csv" % trial_id, index=False)
-    M2
+    M2.to_csv(os.path.join(trial_dir, f"test1_id_{trial_id}.csv"), index=False)
     
     # Output 2 for Plots
     M3 = M_df[['PLOT_ID', 'X', 'Y', 'PLOT_NO']].copy()
     M3.rename(columns={'X': 'Column', 'Y': 'Row'}, inplace=True)
-    # --- Saving file 
-    M3.to_csv("test2_id_%s.csv" % trial_id, index=False)
-    # --- Printing to check  
-    M3
+    M3.to_csv(os.path.join(trial_dir, f"test2_id_{trial_id}.csv"), index=False)
     
     # Spatial layout - Output 3
     # --- Extrating data
@@ -153,18 +158,16 @@ for trial_id in trial_ids:
     D.index = rows
     D.columns = cols
     # --- Saving file 
-    D.to_csv("test3_id_%s.csv" % trial_id, index=True)
-    # --- Printing to check
-    D
+    D.to_csv(os.path.join(trial_dir,f"test3_id_{trial_id}.csv"), index=True)
     
         
     
     # Output 5 - Only Plot IDs and NOs
     M4 = M_df[['PLOT_NO', 'PLOT_ID']]
     # --- Saving file 
-    M4.to_csv("test4_id_%s.csv" % trial_id, index=False)
-    # --- Printing to check
-    M4
+    M4.to_csv(os.path.join(trial_dir,f"test4_id_{trial_id}.csv"), index=False)
+
+    print(f"Download and save completed for trial ID {trial_id}")
 
 # Combine all dataframes
 final_M = pd.concat(all_dataframes_M, ignore_index=True)
