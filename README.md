@@ -11,6 +11,7 @@ This document outlines a pipeline developed by the [*Geospatial Data Science Lab
 The Data PULL results show the data downloaded from the T3 Breedbase Database after establishing a successful connection. The main data obtained include: Trial name, Plot ID, studyDBId, studyName, Column number, Row number, Plot number, Plot map, Trial type, etc. After running the script with the specified trial IDs, the user will receive four spreadsheet files such as ```test1_id_{trial_id}.csv```, ```test2_id_{trial_id}.csv```, ```test3_id_{trial_id}.csv```, and ```test4_id_{trial_id}.csv```. Below is a sample of the results:
 
 - Test 1
+
 | Name          | PLOT_ID | studyDbId |        studyName         | Column | Row |  PLOT_NO |    TrialType      |
 |---------------|---------|-----------|--------------------------|--------|-----|----------|-------------------|
 | KSTdGD30-8    | 1373887 | 9326      | 22_TdGD_Hays_Yield_Trials|   1    |  1  |    1     | phenotyping_trial | 
@@ -20,6 +21,7 @@ The Data PULL results show the data downloaded from the T3 Breedbase Database af
 | KSTdGD32-106  | 1374375 | 9326      | 22_TdGD_Hays_Yield_Trials|   21   |  5  |    5     | phenotyping_trial | 
 
 - Test 2
+  
 | PLOT_ID |  Column |  Row  |  PLOT_NO |
 |---------|---------|-------|----------|
 | 1373887 |   1     |  1    |    1     | 
@@ -32,6 +34,7 @@ The Data PULL results show the data downloaded from the T3 Breedbase Database af
 ![Plot map ](/figures/Plotmap.png)
 
 - Test 4
+  
 |  PLOT_NO | PLOT_ID |
 |----------|---------|
 |    1     | 1373887 |
@@ -61,8 +64,6 @@ The code is developed using python 3.7 on Windows OS. No special computing power
 2. Install dependencies:
    ```
    pip install -r requirements.txt
-   ```
-
    ```
 
 ### Data preparation
@@ -105,7 +106,7 @@ python tools/BrAPI_PUSH.py --cfg data/cornell_data_2022.csv
 - If you are not authorized and need authorization, please contact David Waring at djw64@cornell.edu
 
 ### Links
-- BrAPI documentation can be accessed at: [*TAMU/T3 BrAPI*](Bhttps://notes.triticeaetoolbox.org/w39PW42OSTeDvDNX_WVhZg)
+- BrAPI documentation can be accessed at: [*TAMU/T3 BrAPI*](https://notes.triticeaetoolbox.org/w39PW42OSTeDvDNX_WVhZg)
 - Tutorials from the T3 Team at: [*2023 WheatCAP Workshop*](https://notes.triticeaetoolbox.org/s/L6d41SNKQ)
 
 
