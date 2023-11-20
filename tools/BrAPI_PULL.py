@@ -50,7 +50,7 @@ def fetch_paginated_data(endpoint):
 
     return all_data
 
-# #### Input the Trial_ID
+# Input the Trial_ID
 trial_id_input = input("Enter trial IDs, separated by commas (e.g., 9325,9326,9358,9427): ")
 trial_ids = [int(id.strip()) for id in trial_id_input.split(',')]
 
