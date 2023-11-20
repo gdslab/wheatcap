@@ -60,7 +60,7 @@ The code is developed using python 3.7 on Windows OS. No special computing power
 
 ## Quick start
 ### Installation
-1. Clone this repository, and we'll call the directory that you cloned ${POSE_ROOT}.
+1. Clone this repository, and we'll call the directory that you cloned ${WheatCAP_ROOT}.
 2. Install dependencies:
    ```
    pip install -r requirements.txt
@@ -89,13 +89,14 @@ python tools/BrAPI_PULL.py
 
 ```
 - This will prompt for the ```trial_ids```. Enter that, and you should get the CSV files as described in the sample result section above.
+- The files downloaded will be saved in a folder named ```output```.
 
 #### Data PUSH
 - Ensure you have the final spreadsheet to upload in the folder ```data``` in .csv format.
 - Then enter the following in your command line and input your file name accordingly:
 
 ```
-python tools/BrAPI_PUSH.py --cfg data/cornell_data_2022.csv
+python tools/BrAPI_PUSH.py --cfg data/cornell_data_2022.csv(your file name here)
 
 ```
 - The script will prompt the user to enter the following:
