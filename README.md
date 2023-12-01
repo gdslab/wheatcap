@@ -96,7 +96,7 @@ python tools/BrAPI_PULL.py
 - Then enter the following in your command line and input your file name accordingly:
 
 ```
-python tools/BrAPI_PUSH.py --cfg data/[YOUR_FILE_NAME_HERE]
+python tools/BrAPI_PUSH.py [YOUR_FILE_NAME_HERE]
 
 ```
 - The script will prompt the user to enter the following:
