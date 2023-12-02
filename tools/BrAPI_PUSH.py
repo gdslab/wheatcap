@@ -43,7 +43,11 @@ def main(csv_file):
         response.raise_for_status()
 
 
+    # Check if the CSV file exists and is accessible
+    if not os.path.isfile(csv_file):
+        raise ValueError("The specified CSV file does not exist or cannot be accessed")
 
+    
     # Read the input data from the CSV file
     df = pd.read_csv(csv_file)
     plot_ids = df.iloc[:, 0]
@@ -77,12 +81,9 @@ def main(csv_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Push Phenotypic data to T3 Breedbase DB.')
-    parser.add_argument('--cfg', type=str, help='Path to the file', required=True)
+    parser.add_argument('csv_file', type=str, help='Path to the file', required=True)
 
     args = parser.parse_args()
-    csv_file = args.cfg
-
-    if not os.path.isfile(csv_file):
-        raise ValueError("The specified file does not exist")
+    csv_file = args.csv_file
 
     main(csv_file)
