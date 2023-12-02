@@ -31,7 +31,7 @@ The Data PULL results show the data downloaded from the T3 Breedbase Database af
 | 1374375 |   21    |  5    |    5     |  
 
 - Test 3
-![Plot map ](/figures/Plotmap.png)
+![Plot map ](/figures/Plotmap_uas.png)
 
 - Test 4
   
