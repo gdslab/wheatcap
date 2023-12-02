@@ -30,7 +30,10 @@ The Data PULL results show the data downloaded from the T3 Breedbase Database af
 | 1374505 |   21    |  29   |    4     | 
 | 1374375 |   21    |  5    |    5     |  
 
+
 - Test 3
+
+
 ![Plot map ](/figures/Plotmap_uas.png)
 
 - Test 4
@@ -92,11 +95,11 @@ python tools/BrAPI_PULL.py
 - The files downloaded will be saved in a folder named ```output```.
 
 #### Data PUSH
-- Ensure you have the final spreadsheet to upload in the folder ```data``` in .csv format.
-- Then enter the following in your command line and input your file name accordingly:
+- Ensure you have the final spreadsheet in .csv format.
+- Then enter the following in your command line and input your ```file path location``` accordingly:
 
 ```
-python tools/BrAPI_PUSH.py [YOUR_FILE_NAME_HERE]...
+python tools/BrAPI_PUSH.py [YOUR_FILE_PATH_HERE]
 
 ```
 - The script will prompt the user to enter the following:
